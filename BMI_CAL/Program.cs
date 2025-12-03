@@ -125,18 +125,17 @@
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 BMI = weight / ((height / 100.0) * (height / 100.0));
-                BMI.ToString("#.##");
                 if (gender == "M")
                 {
                     Result = CalculateMaleBMI(BMI);
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Hello Mr. " + name + " you BMI result is " + BMI + " so you that make you in " + Result + " state");
+                    Console.WriteLine($"Hello Mr. {name} you BMI result is {BMI:F2}  so you that make you in {Result} state");
                 }
                 else if (gender == "F")
                 {
                     Result = CalculateFemaleBMI(BMI);
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Hello Ms. " + name + " you BMI result is " + BMI + " so you that make you in "+  Result + " state");
+                    Console.WriteLine($"Hello Ms. {name} you BMI result is {BMI:F2}  so you that make you in {Result}state");
                 }
 
                 Console.ForegroundColor = ConsoleColor.Blue;
